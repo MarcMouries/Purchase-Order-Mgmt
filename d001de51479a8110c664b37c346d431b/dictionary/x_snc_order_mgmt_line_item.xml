@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Line Item" max_length="40" name="x_snc_order_mgmt_line_item" type="collection">
+    <element label="Line Item" max_length="40" name="x_snc_order_mgmt_line_item" sizeclass="0" type="collection">
         <element label="Order" max_length="32" name="order" reference="x_snc_order_mgmt_order" type="reference"/>
+        <element label="Total price" max_length="20" name="total_price" type="currency"/>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
         <element label="Quantity" max_length="40" name="quantity" type="integer"/>
+        <element label="Unit price" max_length="20" name="unit_price" type="currency"/>
         <index name="index">
             <element name="sys_class_name"/>
         </index>
